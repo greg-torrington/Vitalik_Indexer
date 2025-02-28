@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: vitalik_indexer
+networks:
+- id: 1
+  start_block: 0
+  contracts:
+  - name: ECR20
+  # - name: UshiToken
+    # address:
+    # - 0x6Dca182ac5E3f99985bC4Ee0f726d6472aB1ec55
+    handler: src/EventHandlers.ts
+    events:
+    - event: Approval(address indexed owner, address indexed spender, uint256 value)

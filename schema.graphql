@@ -1,0 +1,7 @@
+type ECR20_Approval {
+  id: ID!
+  owner: String!
+  spender: String!
+  value: BigInt!
+}
+
