@@ -3,5 +3,12 @@ type ECR20_Approval {
   owner: String!
   spender: String!
   value: BigInt!
+  srcAddress: String!
+  transactionIndex: Int!
+  hash: String!
+  to: String!
+  from: String!
+  parentHash: String!
+  transactionsRoot: String!
 }
 
