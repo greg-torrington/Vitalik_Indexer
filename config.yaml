@@ -5,9 +5,15 @@ networks:
   start_block: 0
   contracts:
   - name: ECR20
-  # - name: UshiToken
-    # address:
-    # - 0x6Dca182ac5E3f99985bC4Ee0f726d6472aB1ec55
     handler: src/EventHandlers.ts
     events:
     - event: Approval(address indexed owner, address indexed spender, uint256 value)
+      field_selection:
+        transaction_fields:
+          - "transactionIndex"
+          - "hash"
+          - "to"
+          - "from"
+        block_fields:
+          - "parentHash"
+          - "transactionsRoot"
